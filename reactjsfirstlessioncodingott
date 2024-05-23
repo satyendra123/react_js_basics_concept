@@ -1,0 +1,79 @@
+Step-1 - sabse pahle mai simply kya karunga ki node download karunga LTS(long term support). aur iske install hone ke bad path sab dal denge aur check krenge cmd open karke node --version likhkar agar ye version bta dega means hum successfully node download kar chuke hai aur ab hum apna react ka first project bana sakte hai
+Step-2 ab D disk me jayenge aur ek folder banayenge ReactjsProjects ke name se. aur is folder ko cmd me open kar lenge aur command likhenge apna pahla react ka project banane ke liye npx create-react-app codingott so isse ek folder banega codingott ke name se yahi humare project ka name hai
+Step-3 npm(node project manager) npm i bootstrap, npm i nodemon,npm install recharts, npm install react-icons,npm install axios, aise likhkar hum install karenge chizo ko. jaise python me hum pip se karte the 
+Step-4 bootstrap ko use karne se pahle kisi components ya function me bootstrap ke css file ko aur bootstrap ke js file ko kuch is tarike se install kar lenge import 'bootstrap/dist/css/bootstrap.min.css', import 'bootstrap/dist/css/bootstrap.min.css';
+Step-5 the second method of using bootstrap is using the CDN. like bootstrap ke website me jayenge aur waha se bootstrap ka css aur js.min bundle ki cdn ke url ko copy kar lenge aur apne public folder me jayenge index.html file ko open karenge aur bootstrap ke css file ko title tag ke upar paste kar denge aur bootstrap ke js file ko body end tag ke niche paste kar denge.
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+       <title>
+       </body>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+Step-6 ek chiz yad rakhna ki jab bootstrap ka use karenge to class ki jagah par className likhenge aur jitne bhi properties hai wo camelcase follow karenge means do words ke bich me gap nahi hona chahiye aur second word ka first letter captal me likha hona chahiye
+
+Step-7 JSX properties- jsx ka use jo hai page ko dynamic banane ke liye krte hai. man lo maine ek variable x banaya aur usme value 100 hai. mai is x ki values ko webpage me show karana chahta hu to html ke line ke bich me mujhe javascript ka code likhna hai to mai direct nahi likh sakta hu mujhe use is {} expression ke andar hi likhna hoga. mai jsx me string pass kar sakta hu lekin mai javascript ka kuch aisa chiz nahi likh sakta hu jo mujhe object return karta ho jaise {new Date()} agar mai aise likhunga to mujhe error dekhne milega
+       kyuki jo Date() function hai wo ek object return karta hai. so agar mai jo object return hota hai usko convert kar du string me to mujhe error show nahi hoga so mai {JSON.stringyfi(new Date())} aise likhta hu to mujhe error nahi dikhta hai aur mujhe aaj ka date aur time dekhne ko milta hai.
+
+Step-8 man lo mujhe inline css likhna hai to mai kya karunga ki yaha socho thoda sa ki css me hum ek object hi to banakar likhte hai aisa {color:'red', text-decoration:none} kuch is tarah se external css me to hum {} iske andar likhte hai kyuki hum ek object banate hai. lekin agar mujhe object ko html me likhna hoga to mujhe jsx expression ke andar likhna hoga isliye mujhe inline css kuch is tarah se likhte hai
+       <nav style = {{                                 // bahar wala jsx expression hota hai aur andar wala object banane ke liye
+         color:'red',
+         border:'2px solid red',
+       }}>
+
+
+Step-9 App.js 
+
+import './App.css';
+function App() {
+  return (
+    <div>
+      <h1 className="text-primary">Satyendra</h1>
+      <p>www.codingott</p>
+      <p>help line number: 9993771891</p>
+    </div>
+  );
+}
+export default App;
+
+Step-8 index.js
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+
+Step-9 npm start likhkar code ko run karenge aur humara fronted run hone lag jayega
+Step-10 man lo isi project me hume apne ek navbar banana hai to hum ek Components ka folder banayenge SRC folder ke andar aur usme ek file banayenge Navbar.js aur Navbar.css ke name se. humesa yad rakhna ki jab bhi components ke andar file banayenge to uska first letter hum humesa capital me likhenge jisse ki koi error na aaye import karne me
+Step-11 ab jo humara Navbar.js file hai isme hum upar likhenge rfce(react function component export) ye shortcut hai isko likhne se humara ek function bankar taiyar ho jata hai. is function ko hum index.js me import karke call kara denge kuch is tarike se
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import Navbar from './Components/Navbar'
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+    <Navbar/>
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+
+
+
+                   
