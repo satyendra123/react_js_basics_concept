@@ -22,18 +22,95 @@ Step-8 man lo mujhe inline css likhna hai to mai kya karunga ki yaha socho thoda
 Step-9 App.js 
 
 import './App.css';
+
 function App() {
+  var x=100;
   return (
     <div>
-      <h1 className="text-primary">Satyendra</h1>
-      <p>www.codingott</p>
-      <p>help line number: 9993771891</p>
+<nav style={{
+  backgroundColor:'pink',
+  width:'100%',
+  padding:'0px',
+  margin:'0px',
+}}>
+  <ul style={{
+    listStyleType:'none',
+    display:'flex',
+    justifyContent:'space-evenly',
+  }}>
+      <li><a href="#" style={{
+        textDecoration:'none',
+        color:'white',
+        display:'block',
+        margin:'8px',
+
+      }}>Home {x+200}</a></li>
+      <li><a href="#" style={{
+        textDecoration:'none',
+        color:'white',
+        display:'block',
+        margin:'8px',
+
+      }}>Image {x}</a></li>
+      <li><a href="#"  style={{
+        textDecoration:'none',
+        color:'white',
+        display:'block',
+        margin:'8px',
+
+      }}>Videos {JSON.stringify(new Date())}</a></li>
+      <li><a href="#"  style={{
+        textDecoration:'none',
+        color:'white',
+        display:'block',
+        margin:'8px',
+
+      }}>Movies</a></li>
+      <li><a href="#"  style={{
+        textDecoration:'none',
+        color:'white',
+        display:'block',
+        margin:'8px',
+
+      }}>Contact us</a></li>
+   </ul>
+</nav>
+
+<section style={{
+  backgroundColor:'#f5f5f5',
+  width:'75%',
+  margin:'48px auto',
+  padding:34
+}}>
+  <h1>Hello how are you</h1>
+</section>
+
+<footer style={{
+  backgroundColor:'#323232',
+  color:'white',
+  textAlign:'center',
+  padding:100
+}}>
+<h1>This is footer</h1>
+</footer>
     </div>
   );
 }
+
 export default App;
 
-Step-8 index.js
+Note a): isse maine bhut sara css sikha jaise agr li tag humesa ek ke niche ek aata hai kyuki ye block level element hai aur mai chahta hu ki inhe agal bagal me set ho jaye to mai simply iske parent me jakar jo ki ul hai usko display flex kar dunga
+aur mai chahta hu ki ye jo li hai wo barabar barabar bat jaye to mai usme property lagaunga justifyContent:space-evenly. yad rahe ye dono properties humesa parent me lgate hai
+b) agar hume horizontally center karna hai to mai justifyContent:'center' karunga aur agar mujhe horizontally karna hai to mai textAlign:'center' karunga
+c) agar mujhe kisi div ko center kana me karna hai to mai dekhta hu ki is chiz ko hum kaise kar sakte hai
+
+
+d) anchor tag me hum margin,padding,height,width nahi de sakte hai kyuki ye inline element hai to pahle mujhe ise display:block karna hoga taki anchor tag ek block element ban jaye aur hum isme margin padding apply kar sake
+
+
+
+Step-10 
+index.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
